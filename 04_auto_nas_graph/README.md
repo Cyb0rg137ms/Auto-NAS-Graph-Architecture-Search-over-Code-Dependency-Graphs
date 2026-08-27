@@ -81,3 +81,7 @@ python cli.py --scan_dir . --max_latency 6.0 --max_params 3.5 --output_code gene
   <br/>
   <small>Ecosystem mapping and validation protocols courtesy of <a href="https://q.com">q.com</a></small>
 </div>
+
+## Performance Benchmark
+
+*Benchmark not available:* No benchmark script found
