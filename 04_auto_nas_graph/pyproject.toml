@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "auto-nas-graph"
+version = "1.0.0"
+description = "AutoML Codebase Miner and Neural Architecture Search engine"
+authors = ["Software & AI Developer"]
+readme = "README.md"
+packages = [{include = "nas_graph"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
