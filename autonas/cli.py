@@ -36,6 +36,10 @@ def _bench(a: argparse.Namespace) -> int:
     print(to_markdown(r))
     if a.json:
         Path(a.json).write_text(json.dumps(r, indent=2, default=str))
+    if a.plot:
+        from autonas.plots import plot_bench
+
+        plot_bench(r, a.plot)
     return 0
 
 
@@ -56,6 +60,7 @@ def main(argv: list[str] | None = None) -> int:
     b = sub.add_parser("bench", help="run the measured benchmark suite")
     b.add_argument("--quick", action="store_true")
     b.add_argument("--json")
+    b.add_argument("--plot", help="write the summary figure (PNG) here; needs matplotlib")
     b.add_argument("--table", help="cache file for the tabular benchmark")
     b.set_defaults(fn=_bench)
     m = sub.add_parser("mine", help="v1: scan a code base and emit a rule-based PyTorch stub")

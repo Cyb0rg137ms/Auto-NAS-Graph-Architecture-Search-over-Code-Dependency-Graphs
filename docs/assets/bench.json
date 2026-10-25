@@ -1,0 +1,124 @@
+{
+  "task": {
+    "n_per_class": 200,
+    "n_classes": 3,
+    "noise": 0.3,
+    "turns": 2.0,
+    "seed": 0
+  },
+  "table": {
+    "archs": 125,
+    "build_s": 22.79686709899397,
+    "val_min": 0.3400000035762787,
+    "val_median": 0.6899999976158142,
+    "val_max": 0.9600000083446503,
+    "best": "0->1:tanh_linear, 0->2:relu_linear, 1->2:tanh_linear",
+    "best_test": 0.9466666579246521,
+    "oracle_test": 0.9566666483879089
+  },
+  "strategies": {
+    "random": {
+      "5": {
+        "mean_test_regret": 0.07846664905548095,
+        "p_found_best_val": 0.04
+      },
+      "10": {
+        "mean_test_regret": 0.026199984550476074,
+        "p_found_best_val": 0.08
+      },
+      "20": {
+        "mean_test_regret": 0.014866652488708497,
+        "p_found_best_val": 0.14
+      },
+      "40": {
+        "mean_test_regret": 0.008133320808410645,
+        "p_found_best_val": 0.26
+      }
+    },
+    "evolution": {
+      "5": {
+        "mean_test_regret": 0.07846664905548095,
+        "p_found_best_val": 0.04
+      },
+      "10": {
+        "mean_test_regret": 0.026199984550476074,
+        "p_found_best_val": 0.08
+      },
+      "20": {
+        "mean_test_regret": 0.010599989295005798,
+        "p_found_best_val": 0.14
+      },
+      "40": {
+        "mean_test_regret": 0.008466655611991883,
+        "p_found_best_val": 0.52
+      }
+    },
+    "local": {
+      "5": {
+        "mean_test_regret": 0.09659997940063476,
+        "p_found_best_val": 0.04
+      },
+      "10": {
+        "mean_test_regret": 0.05199998259544372,
+        "p_found_best_val": 0.18
+      },
+      "20": {
+        "mean_test_regret": 0.022999982237815856,
+        "p_found_best_val": 0.48
+      },
+      "40": {
+        "mean_test_regret": 0.007866650223731994,
+        "p_found_best_val": 0.68
+      }
+    }
+  },
+  "darts": [
+    {
+      "seed": 0,
+      "genotype": "0->1:zero, 0->2:zero, 1->2:zero",
+      "val": 0.3400000035762787,
+      "test_regret": 0.65666663646698,
+      "percentile": 0.0,
+      "seconds": 0.5230606450058986
+    },
+    {
+      "seed": 1,
+      "genotype": "0->1:linear, 0->2:zero, 1->2:skip",
+      "val": 0.5966666638851166,
+      "test_regret": 0.3233333230018616,
+      "percentile": 0.32,
+      "seconds": 0.5139419159968384
+    },
+    {
+      "seed": 2,
+      "genotype": "0->1:skip, 0->2:zero, 1->2:relu_linear",
+      "val": 0.7199999988079071,
+      "test_regret": 0.20999997854232788,
+      "percentile": 0.584,
+      "seconds": 0.49949352200201247
+    },
+    {
+      "seed": 3,
+      "genotype": "0->1:skip, 0->2:skip, 1->2:skip",
+      "val": 0.476666659116745,
+      "test_regret": 0.45666666328907013,
+      "percentile": 0.2,
+      "seconds": 0.5110519629961345
+    },
+    {
+      "seed": 4,
+      "genotype": "0->1:linear, 0->2:skip, 1->2:zero",
+      "val": 0.4333333224058151,
+      "test_regret": 0.5566666573286057,
+      "percentile": 0.096,
+      "seconds": 0.5095257789944299
+    }
+  ],
+  "surrogate": {
+    "10": 0.3577881132937004,
+    "25": 0.6685273138594245,
+    "50": 0.7586473354461304,
+    "100": 0.8935660325796928
+  },
+  "total_s": 26.586706353002228
+}
